@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;550;700&display=swap');
+
+/* Dynamic Light Theme Design System Overrides
+   Applied when the top level container has the .light class
+*/
+.light {
+  background-color: #F8FAFC !important;
+  color: #0F172A !important;
+}
+
+/* Typography color scaling for AAA contrast ratio inside light mode */
+.light .text-slate-100,
+.light .text-slate-200 {
+  color: #0F172A !important; /* Carbon Charcoal */
+}
+.light .text-slate-300 {
+  color: #1E293B !important; /* Slate 800 */
+}
+.light .text-slate-400 {
+  color: #334155 !important; /* Slate 700 */
+}
+.light .text-slate-500 {
+  color: #475569 !important; /* Slate 600 */
+}
+.light .text-slate-650,
+.light .text-slate-700 {
+  color: #475569 !important;
+}
+
+/* Rich branding cyan coloring */
+.light .text-cyan-400 {
+  color: #0891B2 !important; /* Cyber cyan 600 */
+}
+.light .text-cyan-300 {
+  color: #0E7490 !important; /* Cyan 700 */
+}
+.light .border-cyan-800\/60,
+.light .border-cyan-950 {
+  border-color: #CBD5E1 !important;
+}
+.light .bg-cyan-900\/20,
+.light .bg-cyan-950\/20,
+.light .bg-cyan-950\/30 {
+  background-color: rgba(6, 182, 212, 0.08) !important;
+}
+
+/* Bento Grid Box Card Styling overrides */
+.light .bg-slate-900\/80, 
+.light .bg-slate-900\/60, 
+.light .bg-slate-900\/40, 
+.light .bg-slate-950\/70,
+.light .bg-slate-950\/60,
+.light .bg-slate-900\/100,
+.light .bg-slate-950 {
+  background-color: #FFFFFF !important;
+}
+
+/* Card and section borders */
+.light .border-slate-800,
+.light .border-slate-900,
+.light .border-slate-850,
+.light .border-slate-800\/80,
+.light .border-slate-900\/65,
+.light .border-slate-900\/80,
+.light .border-slate-900\/40,
+.light .border-slate-900\/30,
+.light .border-slate-950 {
+  border-color: #CBD5E1 !important; /* slate-300 lines */
+}
+
+/* Generic borders and dividers mapping */
+.light [class*="border-slate"],
+.light [class*="divide-slate"] {
+  border-color: #CBD5E1 !important;
+}
+
+/* Header/Navbar style overrides in light theme */
+.light header {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+.light header button,
+.light header a,
+.light header nav a {
+  color: #0F172A !important;
+}
+.light header button:hover,
+.light header a:hover,
+.light header nav a:hover {
+  background-color: rgba(6, 182, 212, 0.08) !important;
+  color: #0891B2 !important;
+}
+/* Mobile navbar dropdown specifically */
+.light header div[class*="md:hidden"] {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: #CBD5E1 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05) !important;
+}
+.light header div[class*="md:hidden"] a {
+  color: #0F172A !important;
+  border-bottom-color: #F1F5F9 !important;
+}
+.light header div[class*="md:hidden"] a:hover {
+  background-color: rgba(6, 182, 212, 0.08) !important;
+}
+
+/* Text and background on badge details */
+.light .bg-slate-950\/20,
+.light .bg-slate-950\/30 {
+  background-color: #F1F5F9 !important;
+}
+
+/* Primary contact & submit structures */
+.light input,
+.light textarea {
+  background-color: #FFFFFF !important;
+  border-color: #CBD5E1 !important;
+  color: #0F172A !important;
+}
+.light input:focus,
+.light textarea:focus {
+  border-color: #06B6D4 !important;
+  box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.1) !important;
+}
+
+/* Github heat map boxes in Light theme */
+.light .bg-slate-900 {
+  background-color: #E2E8F0 !important; /* Empty commits visual */
+}
+.light .bg-emerald-950 {
+  background-color: #BBF7D0 !important; /* light contribution 1 */
+}
+.light .bg-emerald-800 {
+  background-color: #86EFAC !important; /* light contribution 2 */
+}
+.light .bg-emerald-650 {
+  background-color: #4ADE80 !important; /* light contribution 3 */
+}
+.light .bg-emerald-500 {
+  background-color: #10B981 !important; /* light contribution 4 */
+}
+
+/* Timeline dots */
+.light .bg-slate-950.border-slate-800 {
+  background-color: #F8FAFC !important;
+  border-color: #CBD5E1 !important;
+}

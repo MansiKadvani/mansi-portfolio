@@ -1,0 +1,6 @@
+{
+  "name": "B.Tech Computer Engineering Portfolio & SaaS Dashboard",
+  "description": "Premium developer-focused portfolio and engineering dashboard styled like modern SaaS products, featuring a full-stack Express backend and MongoDB integration with state management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
