@@ -2,6 +2,8 @@
 
 A full-stack portfolio website built to showcase my projects, technical skills, academic journey, and software development experience. The project also includes an admin panel that allows me to manage portfolio content, profile information, and contact messages from a single dashboard.
 
+🌐 **Live Demo:** https://mansi-portfolio-b2ol.onrender.com/
+
 ---
 
 ## 🚀 Features
