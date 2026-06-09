@@ -64,8 +64,8 @@ export function ResumeModal({ isOpen, onClose, profile }: ResumeModalProps) {
   const githubUrl = "https://github.com/MansiKadvani";
   const linkedinLink = "linkedin.com/in/mansi-kadvani-01";
   const linkedinUrl = "https://linkedin.com/in/mansi-kadvani-01";
-  const portfolioLink = "mansi-kadvani.vercel.app";
-  const portfolioUrl = "https://mansi-kadvani.vercel.app";
+  const portfolioLink = "https://mansi-portfolio-b2ol.onrender.com/";
+  const portfolioUrl = "https://mansi-portfolio-b2ol.onrender.com/";
 
   return (
     <AnimatePresence>
