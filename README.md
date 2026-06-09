@@ -1,118 +1,161 @@
-# B.Tech Computer Engineering Portfolio & SaaS Dashboard
+# Personal Portfolio Website
 
-A premium, full-stack, developer-focused portfolio and engineering command center styled like a cohesive modern SaaS product. Engineered with React 19, TypeScript, Tailwind CSS v4, and Node.js/Express, this application hosts a beautiful personal portfolio alongside an in-depth administrative portal ("Control Hub") to manage files, profile details, and reader inquiries in real time.
+A full-stack portfolio website built to showcase my projects, technical skills, academic journey, and software development experience. The project also includes an admin panel that allows me to manage portfolio content, profile information, and contact messages from a single dashboard.
 
 ---
 
-## 🚀 Key Features
+## 🚀 Features
 
-### 1. Developer Portfolio Showcase
-*   **Dynamic Sections**: Seamlessly displays biography, academic milestones, technical achievements, and an interactive skills grid.
-*   **Engineering Showcase**: Highlight key development projects, including problem-solved briefs, tech stack labels, and links to source code/live previews.
-*   **Smooth Motion Design**: Fully animated using `motion/react` with micro-animations and route-transition visual effects.
-*   **Mobile & Desktop Optimized**: Responsive layout ensuring comfortable full-grid display on spacious laptop monitors and a compact full-width layout for handy smartphone previews.
+### 1. Portfolio Website
+*   Personal introduction and academic background
+*   Skills section showcasing technologies and tools I have learned
+*   Project showcase with descriptions, technologies used, and project links
+*   Contact form for visitors to send messages
+*   Responsive design for desktop, tablet, and mobile devices
+*   Smooth animations and modern user interface
 
-### 2. Control Hub // Admin Workspace
-*   **Secure Administration**: A bespoke, JWT-secured administration cabinet designed with modern sidebar controls and tabbed workspace menus.
-*   **Real-time Profile Manager**: Tailor the hero headers, scrolling animated titles, social links, metrics, and timeline events dynamically from the browser.
-*   **Contact Inbox Manager**: View user inquiries and messages from the contact form as they land, with a **Direct Delete** mechanism to prune processed or spam emails cleanly.
-*   **Live DB Sync Feedback Indicator**: Intelligent state machine signaling whether the cluster is connected to a primary database or running on local backup storage.
+### 2. Admin Panel
+*   Secure login using JWT authentication
+*   Manage profile information and portfolio content
+*   Update project details and skills
+*   View and delete contact messages
+*   Monitor database connection status
+*   Simple dashboard for managing website data
 
-### 3. Full-Stack Architecture
-*   **Server Core**: Run on an **Express** web framework integrated directly into Vite dev layers.
-*   **Dual Storage Design**: Backed by **MongoDB / Mongoose** with automatic, high-availability fallback to custom single-file json arrays (in the `/data` directory) if a remote database connection is absent.
-*   **Express Router Logger**: Transparent operational logs stored in `/data/express_routing.log` to audit request-response sequences.
-*   **Clean Bundling**: Automated esbuild compiling for Node.js using targeted CommonJS (`dist/server.cjs`) to skip filesystem I/O overhead.
+### 3. Full-Stack Functionality
+*   Frontend built using React and TypeScript
+*   Backend developed using Node.js and Express
+*   MongoDB integration using Mongoose
+*   JSON-based fallback storage when database connection is unavailable
+*   REST API architecture for communication between frontend and backend
+*   PDF resume generation support
 
 ---
 
 ## 🛠️ Technology Stack
 
-| Layer | Technologies & Libraries |
+| Layer | Technologies |
 | :--- | :--- |
-| **Frontend** | React 19, TypeScript, Tailwind CSS v4, Vite, `motion/react` (Framer Motion) |
+| **Frontend** | React 19, TypeScript, Tailwind CSS, Vite |
+| **Animations** | Framer Motion |
 | **Icons** | Lucide React |
-| **Backend** | Node.js, Express, JSON Web Tokens (JWT) |
-| **Database** | MongoDB & Mongoose (with JSON-fallback schema structures) |
+| **Backend** | Node.js, Express.js |
+| **Authentication** | JSON Web Tokens (JWT) |
+| **Database** | MongoDB, Mongoose |
+| **Storage Backup** | JSON Files |
 | **Bundling** | ESBuild, Vite |
-| **Document Export** | PDFKit (for resume generation) |
+| **Document Generation** | PDFKit |
 
 ---
 
 ## 📥 Project Structure
 
 ```bash
-├── data/                    # JSON assets and fallback databases
-│   ├── contacts.json        # Contact message archive
-│   ├── profile.json         # Master profile layout values
-│   ├── projects.json        # Portfolio developer projects
-│   └── skills.json          # Skills rating array
-├── dist/                    # Compiled and bundled production output
-├── server/                  # Backend Node.js controller & routing layers
-│   ├── config/              # Database connection setups
-│   ├── controllers/         # REST API controller definitions
-│   ├── middlewares/         # JWT status authentication engines
-│   ├── models/              # Mongoose data schemas
-│   └── routes/              # Express API endpoint declarations
-├── src/                     # React Single-Page Application (SPA)
-│   ├── assets/              # Static vector illustrations and images
-│   ├── components/          # Reusable dashboard and layout elements
-│   ├── App.tsx              # Main high-level React setup
-│   ├── index.css            # Entry Tailwind imports and custom fonts
-│   └── main.tsx             # DOM instantiation entrypoint
-├── server.ts                # Custom full-stack Express server
-├── tsconfig.json            # Strict TypeScript configuration
-├── package.json             # Core dependency manifest and platform scripts
-└── README.md                # This project instruction index
+portfolio/
+│
+├── data/                    # Stores portfolio data and contact messages
+│   ├── contacts.json        # Contact form submissions
+│   ├── profile.json         # Personal profile information
+│   ├── projects.json        # Portfolio projects data
+│   └── skills.json          # Skills and technologies data
+│
+├── server/                  # Backend source code
+│   ├── config/              # Database and application configuration
+│   ├── controllers/         # Handles API request logic
+│   ├── middlewares/         # Authentication and custom middleware
+│   ├── models/              # MongoDB database schemas
+│   └── routes/              # API route definitions
+│
+├── src/                     # Frontend React application
+│   ├── assets/              # Images, icons, and static files
+│   ├── components/          # Reusable React components
+│   ├── App.tsx              # Main application component
+│   ├── main.tsx             # React application entry point
+│   └── index.css            # Global styles
+│
+├── server.ts                # Express server entry file
+├── package.json             # Project dependencies and scripts
+├── tsconfig.json            # TypeScript configuration
+├── vite.config.ts           # Vite configuration
+└── README.md                # Project documentation
+```
+---
+
+## 📥 Installation
+
+### Prerequisites
+
+* Node.js (v18 or later recommended)
+* npm
+* MongoDB (Optional)
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/your-username/mansi-portfolio.git
+cd mansi-portfolio
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+Create a `.env` file in the root directory and add the required environment variables such as:
+
+```env
+JWT_SECRET=your_secret_key
+MONGO_URI=your_mongodb_connection_string
+```
+
+If MongoDB is not configured, the application will use local JSON files stored in the `data` folder.
+
+### Start Development Server
+
+```bash
+npm run dev
+```
+
+Open:
+
+```bash
+http://localhost:3000
+```
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Start Production Server
+
+```bash
+npm run start
 ```
 
 ---
 
-## 🎯 Quick Start Guide
+## 👩‍💻 About Me
 
-### Prerequisites
-*   [Node.js](https://nodejs.org/) (v18.x or above recommended)
-*   [npm](https://www.npmjs.com/) (bundled with Node.js)
-*   *Optional*: MongoDB server instance (for real-world cluster sync)
+**Mansi Kadvani**  
+B.Tech Computer Engineering Student  
+Marwadi University
 
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/mansi-kadvani-portfolio.git
-   cd mansi-kadvani-portfolio
-   ```
-
-2. **Install all dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables**:
-   Create a `.env` file in the root directory (based on `.env.example` if present), specifying credentials such as `JWT_SECRET` and `MONGO_URI`. If left empty, the application safely routes all traffic to the local `/data` fallback storage.
-
-4. **Launch Development Server**:
-   ```bash
-   npm run dev
-   ```
-   Open [http://localhost:3000](http://localhost:3000) in your web browser to view the application.
-
-5. **Compile for Production Setup**:
-   Compile both the production-ready clients and compiling the backend into a cohesive bundle:
-   ```bash
-   npm run build
-   ```
-
-6. **Start Production Server**:
-   ```bash
-   npm run start
-   ```
+I am passionate about Full Stack Development and Software Engineering. I enjoy building practical web applications, learning new technologies, and improving my problem-solving skills through real-world projects.
 
 ---
 
-## 👩‍💻 Author
+## 📬 Contact
 
-**Mansi Kadvani**  
-B.Tech Computer Engineering Student
+* GitHub: https://github.com/MansiKadvani
+* LinkedIn: https://www.linkedin.com/in/mansi-kadvani-583059318
 
-*   **About**: Passionate full-stack developer dedicated to building durable, scalable web experiences, microservices, and modern user-centric interfaces.
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
